@@ -459,9 +459,9 @@ td {
   }
 }
 
-/* .earthDisappearing {
+.earthDisappearing {
   animation: earthDisappearing 15s ease-out 3.5s forwards;
-} */
+}
 
 .earth {
   background-color: blue;
