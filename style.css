@@ -459,9 +459,9 @@ td {
   }
 }
 
-.earthDisappearing {
+/* .earthDisappearing {
   animation: earthDisappearing 15s ease-out 3.5s forwards;
-}
+} */
 
 .earth {
   background-color: blue;
@@ -472,13 +472,26 @@ td {
   width: 200px;
 }
 
+.americas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.europe-africa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
 .north-america {
   background-color: green;
   border-radius: 40%;
   display: block;
   height: 70px;
   left: 12px;
-  position: absolute;
   top: 2px;
   width: 65px;
 }
@@ -486,11 +499,11 @@ td {
 .south-america {
   background-color: green;
   border-radius: 20%;
-  display: block;
+  display: flex;
   height: 35px;
-  left: 45px;
-  position: absolute;
-  top: 75px;
+
+  transform: translateY(100px);
+
   transform: rotate(25deg);
   width: 40px;
 }
@@ -502,7 +515,6 @@ td {
   height: 55px;
   left: 110px;
   overflow: hidden;
-  position: absolute;
   top: 56px;
   transform: rotate(-45deg);
   width: 60px;
@@ -514,7 +526,6 @@ td {
   display: block;
   height: 45px;
   left: 115px;
-  position: absolute;
   top: 5px;
   transform: rotate(-35deg);
   width: 50px;
