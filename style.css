@@ -1,0 +1,645 @@
+body {
+  box-sizing: border-box;
+  display: block;
+  font-family: monospace;
+  height: 100%;
+  margin: auto;
+  padding: 5px;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+header {
+  background-color: white;
+  display: flex;
+  height: 11vh;
+  justify-content: center;
+  width: 100%;
+}
+
+@keyframes typing {
+
+  to {
+    width: 275px;
+  }
+}
+
+.title {
+  animation: typing 6s steps(20, end) 3 alternate forwards;
+  height: 48px;
+  overflow: hidden;
+  width: 0;
+  word-spacing: -16px;
+}
+
+@keyframes bar {
+
+  to {
+    color: black;
+  }
+}
+
+.bar {
+  animation: bar 1s steps(2, start) infinite;
+  color: white;
+  font-size: 25px;
+  width: 0;
+}
+
+.body-container {
+  overflow: hidden;
+}
+
+.universe-and-aside {
+  display: flex;
+  overflow: hidden;
+}
+
+.universe {
+  background: rgb(2, 53, 100);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  margin-right: 4px;
+  overflow: hidden;
+  width: 75%;
+}
+
+aside {
+  background-color: green;
+  border-radius: 5px;
+  margin: 0 2px;
+  max-height: 80vh;
+  overflow: hidden;
+  width: 25%;
+}
+
+.main-scenario {
+  align-items: flex-end;
+  display: flex;
+  height: 65vh;
+  justify-content: space-around;
+  overflow: hidden;
+  width: 100%;
+}
+
+footer {
+  align-items: center;
+  border-radius: 5px;
+  display: flex;
+  height: 7vh;
+  justify-content: center;
+  margin: 3px 0;
+  width: 100%;
+}
+
+.alex {
+  padding-right: 10px;
+}
+
+img {
+  height: 25px;
+  width: 25px;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo > a {
+  padding: 2px;
+}
+
+table {
+  height: 100%;
+  transform: rotate(45deg);
+  width: 100%;
+}
+
+.stars {
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+}
+
+td {
+  height: 4px;
+  margin: auto;
+  width: 4px;
+}
+
+@keyframes starsFlashing {
+
+  0% {
+    height: 4px;
+    opacity: 0;
+    transform: scale(1);
+    width: 4px;
+  }
+
+  50% {
+    height: 4px;
+    opacity: 1;
+    transform: scale(1.2);
+    width: 4px;
+  }
+
+  100% {
+    height: 4px;
+    opacity: 0;
+    transform: scale(1);
+    width: 4px;
+  }
+}
+
+.starsFlashing {
+  animation: starsFlashing 2.9s linear 0s forwards;
+}
+
+.star {
+  background-color: white;
+  border-radius: 50%;
+  height: 4px;
+  opacity: 0;
+  transition: all 1s ease-out;
+  width: 4px;
+}
+
+@keyframes sky {
+
+  0% {
+    background: rgb(2, 53, 100);
+  }
+
+  30% {
+    background: rgb(1, 31, 59);
+  }
+
+  60% {
+    background: rgb(2, 26, 51);
+  }
+
+  100% {
+    background: rgb(0, 8, 15);
+  }
+
+}
+
+.sky {
+  animation-delay: 3s;
+  animation-duration: 8s;
+  animation-fill-mode: forwards;
+  animation-name: sky;
+  animation-timing-function: linear;
+}
+
+@keyframes rocket-fly {
+
+  0% {
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+
+  20% {
+    padding-bottom: 10%;
+    padding-left: 2vw;
+  }
+
+  50% {
+    padding-bottom: 20%;
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+
+  100% {
+    padding-bottom: 30%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes bounce-and-go {
+
+  0% {
+    padding-bottom: 30%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    transform: scale(1) rotate(90deg);
+  }
+
+  20% {
+    padding-bottom: 30%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    transform: scale(1) rotate(90deg) translateY(100px) skew(10deg);
+  }
+
+  50% {
+    padding-bottom: 30%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    transform: scale(5) rotate(90deg) translateY(100px);
+  }
+
+  100% {
+    padding-bottom: 30%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    transform: scale(10) rotate(90deg) translateY(-500px);
+  }
+}
+
+.rocket-fly {
+  animation: rocket-fly 10s linear 3s forwards, bounce-and-go 8s ease 13s forwards;
+}
+
+.rocket-complete {
+  box-sizing: border-box;
+  display: flex;
+  z-index: 1;
+}
+
+.rocket {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.rocket-main {
+  background-color: powderblue;
+  border-radius: 100% 0;
+  height: 30px;
+  transform: rotate(-45deg);
+  width: 30px;
+}
+
+.rocket-behind {
+  background-color: powderblue;
+  border-radius: 1px;
+  height: 8px;
+  left: 50px;
+  width: 15px;
+}
+
+.rocket-fire {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid red;
+}
+
+@keyframes fire {
+
+  0% {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid red;
+  }
+
+  25% {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid orange;
+  }
+
+  50% {
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 15px solid yellow;
+  }
+
+  75% {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid orange;
+  }
+
+  100% {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid red;
+  }
+}
+
+.fire {
+  animation: fire 4s linear infinite alternate;
+}
+
+@keyframes flying {
+
+  0% {
+    background-color: rgb(167, 57, 6);
+    left: 0;
+    top: -460px;
+  }
+
+  15% {
+    background-color: rgb(167, 57, 6);
+    left: -200px;
+    top: -350px;
+  }
+
+  30% {
+    background-color: rgb(167, 57, 6);
+    left: -400px;
+    top: -300px;
+  }
+
+  45% {
+    background-color: rgb(167, 57, 6);
+    left: -900px;
+    top: -200px;
+  }
+
+  60% {
+    background-color: rgb(69, 7, 85);
+    left: -550px;
+    top: -150px;
+  }
+
+  75% {
+    background-color: rgb(69, 7, 85);
+    left: -300px;
+    top: -50px;
+  }
+
+  90% {
+    background-color: rgb(69, 7, 85);
+    left: 0;
+    top: 0;
+  }
+
+  100% {
+    background-color: rgb(69, 7, 85);
+    left: 300px;
+    top: 0;
+  }
+}
+
+.fly {
+  animation-delay: 3s;
+  animation-direction: alternate;
+  animation-duration: 40s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 3;
+  animation-name: flying;
+  animation-timing-function: linear;
+}
+
+.planet-main {
+  background-color: rgb(167, 57, 6);
+  border-radius: 50%;
+  display: flex;
+  height: 75px;
+  left: 0;
+  overflow: hidden;
+  position: relative;
+  top: -460px;
+  transform: rotate(0.5turn);
+  width: 75px;
+}
+
+.shadow {
+  border-radius: 50%;
+  border-top: 7px solid rgb(27, 14, 4);
+  bottom: 2px;
+  height: 65px;
+  left: -3px;
+  position: relative;
+  width: 75px;
+}
+
+.hole1 {
+  border-radius: 100%;
+  border-top: 5px solid rgb(27, 14, 4);
+  display: block;
+  height: 15px;
+  left: 9px;
+  position: absolute;
+  top: 50px;
+  transform: rotate(30deg);
+  width: 20px;
+}
+
+.hole2 {
+  border-radius: 100%;
+  border-top: 5px solid rgb(27, 14, 4);
+  display: block;
+  height: 15px;
+  left: 66px;
+  position: absolute;
+  top: 30px;
+  transform: rotate(-75deg);
+  width: 20px;
+}
+
+.earth-container {
+  display: flex;
+  height: 100px;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+@keyframes earthDisappearing {
+
+  100% {
+    transform: translateY(300px) translateX(-180px);
+  }
+}
+
+.earthDisappearing {
+  animation: earthDisappearing 15s ease-out 3.5s forwards;
+}
+
+.earth {
+  background-color: blue;
+  border-radius: 50%;
+  display: flex;
+  height: 200px;
+  overflow: hidden;
+  width: 200px;
+}
+
+.north-america {
+  background-color: green;
+  border-radius: 40%;
+  display: block;
+  height: 70px;
+  left: 12px;
+  position: absolute;
+  top: 2px;
+  width: 65px;
+}
+
+.south-america {
+  background-color: green;
+  border-radius: 20%;
+  display: block;
+  height: 35px;
+  left: 45px;
+  position: absolute;
+  top: 75px;
+  transform: rotate(25deg);
+  width: 40px;
+}
+
+.africa {
+  background-color: green;
+  border-radius: 40%;
+  display: block;
+  height: 55px;
+  left: 110px;
+  overflow: hidden;
+  position: absolute;
+  top: 56px;
+  transform: rotate(-45deg);
+  width: 60px;
+}
+
+.europe {
+  background-color: green;
+  border-radius: 40%;
+  display: block;
+  height: 45px;
+  left: 115px;
+  position: absolute;
+  top: 5px;
+  transform: rotate(-35deg);
+  width: 50px;
+}
+
+@keyframes article-grow {
+
+  100% {
+    font-weight: 700;
+    transform: scale(1.5);
+  }
+}
+
+.article-animation {
+  animation: article-grow 4s ease-out 0s paused backwards;
+  margin: 5px;
+  overflow: auto;
+  padding-right: 5px;
+}
+
+@media screen and ( max-width : 760px ) {
+
+  .universe-and-aside {
+    flex-direction: column;
+  }
+
+  aside {
+    margin: 3px 0;
+    width: 100%;
+  }
+
+  .alex {
+    text-align: center;
+    width: 80%;
+  }
+
+  .logo {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 20%;
+  }
+
+  .universe {
+    width: 100%;
+  }
+
+  .container-layout {
+    background-color: yellow;
+  }
+
+  /* @keyframes flying {
+    0% {
+      padding-bottom: 0;
+      padding-left: 0;
+      transform: rotate(0deg);
+    }
+    20% {
+      padding-bottom: 45%;
+      padding-left: 5vw;
+      transform: rotate(22.5deg);
+    }
+    50% {
+      padding-bottom: 50%;
+      padding-left: 10vw;
+      transform: rotate(45deg);
+    }
+    100% {
+      padding-bottom: 55%;
+      padding-left: 20vw;
+      transform: rotate(90deg);
+    }
+  } */
+}
+
+@media screen and ( max-width : 760px ) and ( orientation : landscape ) {
+
+  .container-layout {
+    background-color: yellow;
+  }
+
+  .container-orientation {
+    border: 1px solid red;
+  }
+
+  /* @keyframes flying {
+    0% {
+      padding-bottom: 0;
+      padding-left: 0;
+      transform: rotate(0deg);
+    }
+    20% {
+      padding-bottom: 15%;
+      padding-left: 5vw;
+      transform: rotate(22.5deg);
+    }
+    50% {
+      padding-bottom: 20%;
+      padding-left: 10vw;
+      transform: rotate(45deg);
+    }
+    100% {
+      padding-bottom: 25%;
+      padding-left: 20vw;
+      transform: rotate(90deg);
+    }
+  } */
+}
+
+@media screen and ( min-width : 1170px ) {
+
+  .container-layout {
+    background-color: red;
+  }
+
+}
+
+@media screen and ( min-width : 1170px ) and ( orientation : landscape ) {
+
+  .container-layout {
+    background-color: red;
+  }
+
+  .container-orientation {
+    border: 1px solid red;
+  }
+}
