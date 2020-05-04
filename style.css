@@ -524,11 +524,11 @@ td {
   background-color: green;
   border-radius: 40%;
   display: block;
-  height: 45px;
-  left: 115px;
-  top: 5px;
+  height: 25px;
+
+
   transform: rotate(-35deg);
-  width: 50px;
+  width: 25px;
 }
 
 @keyframes pulse-button {
@@ -547,11 +547,9 @@ td {
 }
 
 .reset-button {
-  height: 30px;
   left: 30%;
   position: absolute;
   top: 50%;
-  width: 150px;
 }
 
 .reset-button > button {
@@ -565,7 +563,7 @@ td {
   display: none;
   font-size: 18px;
   font-weight: 700;
-  height: 30px;
+  height: 60px;
   position: absolute;
   width: 150px;
   z-index: 10;
