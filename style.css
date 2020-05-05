@@ -17,9 +17,10 @@ body {
 }
 
 header {
+  align-items: center;
   background-color: white;
   display: flex;
-  height: 11vh;
+  height: 10vh;
   justify-content: center;
   width: 100%;
 }
@@ -33,10 +34,14 @@ header {
 
 .title {
   animation: typing 6s steps(20, end) forwards;
-  height: 48px;
+  height: 32px;
   overflow: hidden;
   width: 0;
   word-spacing: -16px;
+}
+
+.title > h1 {
+  margin: 0;
 }
 
 @keyframes bar {
@@ -50,6 +55,7 @@ header {
   animation: bar 1s steps(2, start) infinite;
   color: white;
   font-size: 25px;
+  margin: 0 0 5px 0;
   width: 0;
 }
 
@@ -85,7 +91,7 @@ aside {
 .main-scenario {
   align-items: flex-end;
   display: flex;
-  height: 65vh;
+  height: 70vh;
   justify-content: space-around;
   overflow: hidden;
   width: 100%;
@@ -447,7 +453,7 @@ td {
 
 .earth-container {
   display: flex;
-  height: 100px;
+  height: 10vh;
   justify-content: space-around;
   overflow: hidden;
 }
@@ -641,6 +647,14 @@ td {
 }
 
 @media screen and ( max-width : 760px ) and ( orientation : landscape ) {
+
+  header {
+    height: 15vh;
+  }
+
+  .earth-container {
+    height: 15vh;
+  }
 
   .container-layout {
     background-color: yellow;
